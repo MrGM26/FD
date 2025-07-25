@@ -103,6 +103,13 @@
 	transition: all .3s;
 	transition-property: transform, opacity;
 }
+.footer-bold-info {
+  font-weight: 500; /* Bold */
+  
+  font-family: var(--lqd-body-font-family); /* Same font */
+  font-size: 15px; /* Match existing .text-14 class */
+}
+
 
 .main-nav {
 	--lqd-menu-items-top-padding: 10px;
@@ -156,6 +163,140 @@
 .ld-sf .submit-text + .submit-icon {
 	margin-inline-start: 0;
 }
+
+/*Our Team Start*/
+.team-section-flip {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.team-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--lqd-color-primary);
+  margin-bottom: 60px;
+}
+
+.team-grid-flip {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.team-flip-card {
+  width: 320px;
+  height: 420px;
+  perspective: 1000px;
+}
+
+.team-flip-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.team-flip-card:hover .team-flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front */
+.team-flip-front {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.team-front-text h3 {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.team-front-text p {
+  margin: 2px 0 0;
+  color: #f5d637;
+  font-size: 13px;
+}
+
+/* Back */
+.team-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-flip-back h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--lqd-color-heading-common);
+  margin-bottom: 6px;
+}
+
+.team-flip-back .role {
+  color: #f5d637;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.team-flip-back .desc {
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f5d637;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1) rotate(5deg);
+  background: var(--lqd-color-primary);
+  color: #fff;
+}
+.social-icons ion-icon {
+  font-size: 20px;
+}
+/*Our Team end*/
 
 @media (max-width: 767px) {
 	.ld-sf .submit-text + .submit-icon {
